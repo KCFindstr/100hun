@@ -1,0 +1,31 @@
+{
+  "clearMocks": true,
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "moduleNameMapper": {
+    "^src/(.*)$": "<rootDir>/src/$1",
+    "^test/(.*)$": "<rootDir>/test/$1"
+  },
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "collectCoverageFrom": [
+    "src/**/*.(t|j)s"
+  ],
+  "coveragePathIgnorePatterns": [
+    "\\.test\\.ts$",
+    "src/index.ts"
+  ],
+  "coverageDirectory": "./coverage",
+  "testRegex": [
+    "\\.test\\.ts$"
+  ],
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ]
+}
