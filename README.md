@@ -20,7 +20,7 @@ Optionally, append `?size={size}` to change the size of the image between 16 and
 
 ### Code Coverage
 
-This can be used as a code coverage badge for [CodeCov](https://codecov.io/): `https://100hun.rabimimi.com/provider/{provider}/{github}/{owner}/{repo}/{branch}/badge.png`. Coverage is rounded to the nearest integer. (Currently, only CodeCov is supported as a `provider`.)
+This can be used as a code coverage badge for [CodeCov](https://codecov.io/): `https://100hun.rabimimi.com/provider/{provider}/{service}/{owner}/{repo}/{branch}/badge.png`. Coverage is rounded to the nearest integer. (Currently, only CodeCov is supported as a `provider`.)
 
 Example:
 
