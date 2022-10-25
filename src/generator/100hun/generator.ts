@@ -8,8 +8,9 @@ export class HunGenerator implements IGenerator {
 
   public async init() {
     this._imageBase = await Jimp.read('assets/100hun.png');
+    this._images.push(await Jimp.read('assets/0hun.png'));
     this._font = await Jimp.loadFont('assets/font.fnt');
-    for (let i = 0; i <= 100; i++) {
+    for (let i = 1; i <= 100; i++) {
       const image = this._imageBase.clone();
       const str = i.toString();
       image.print(this._font, 128 - str.length * 20, -4, str, 128);
