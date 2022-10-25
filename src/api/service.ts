@@ -11,6 +11,10 @@ interface Params {
   branch: string;
 }
 
+interface Queries {
+  size: string;
+}
+
 export function ServicePlugin(
   fastify: FastifyInstance,
   _options: FastifyServerOptions,
@@ -32,6 +36,11 @@ export function ServicePlugin(
           branch,
         );
         const image = await hunGenerator.generate(number);
+        let size = parseInt((req.query as Queries).size);
+        if (!isNaN(size)) {
+          size = Math.min(256, Math.max(size, 16));
+          image.resize(size, size);
+        }
         return res
           .header('Content-Type', 'image/png')
           .send(await image.getBufferAsync(Jimp.MIME_PNG));

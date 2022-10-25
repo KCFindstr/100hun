@@ -22,7 +22,7 @@ export class HunGenerator implements IGenerator {
       await this.init();
     }
     const index = Math.floor(num + 0.5);
-    return this._images[index] || this._imageBase;
+    return (this._images[index] || this._imageBase)?.clone();
   }
 }
 
