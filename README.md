@@ -33,3 +33,21 @@ Example:
 You can append `?size={size}` to change the badge size as well.
 
 Want other support? Feel free to open a PR. The code should be very straightforward.
+
+## Run Your Own 100Hun Server
+
+If you want to use this badge in private repositories, you can run your own 100hun server and supply your own CodeCov token.
+
+You should have NodeJS 18 or later installed. Then, create a `.env` file in the root directory of the project. The following environment variables are required:
+
+```
+PORT=8080
+CODECOV_TOKEN=<your codecov token>
+```
+
+Finally, install the dependencies and run the server:
+
+```bash
+npm i
+npm start
+```
